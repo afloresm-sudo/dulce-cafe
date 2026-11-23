@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Postres & Cafés | Dulce Café</title>
+  <meta name="description" content="Explora nuestra carta completa de repostería artesanal y cafés de especialidad peruana. Opciones tradicionales, veganas y maridajes de autor.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="alternate icon" href="../assets/favicon-32x32.png">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Parisienne&display=swap">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../src/css/styles.css">
+
+  <!-- JavaScript -->
+  <script src="../src/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">📧 <strong>Contacto:</strong> <a href="mailto:hola@dulcecafe.pe">hola@dulcecafe.pe</a></span>
+        <span class="top-bar-item">📞 <strong>Central:</strong> <a href="tel:+5114458920">+51 (1) 445-8920</a></span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><span class="pulse-dot"></span> Horno activo · Nuevas tandas a las 11:00 y 16:30 hrs</span>
+        <span class="top-bar-item">🕒 07:30 - 21:00 hrs</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Encabezado -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/logo.svg" alt="Dulce Café" class="logo-img" width="180" height="42">
+      </a>
+
+      <nav id="menu-principal" class="main-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="carta.html" class="active" aria-current="page">Carta</a></li>
+          <li><a href="../index.html#cafe">Nuestro Café</a></li>
+          <li><a href="reserva.html">Reservar Mesa</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" aria-label="Buscar" data-action="open-search">
+          <img src="../assets/icon-buscar.svg" alt="Buscar" width="20" height="20">
+        </button>
+        <a class="btn btn--small" href="reserva.html">Reservar</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <img src="../assets/icon-menu.svg" alt="Menú" width="20" height="20">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Inicio</a> › Carta de Especialidad</p>
+        <h1>🧁 Nuestra Carta de Postres & Café</h1>
+        <p>Recetas artesanales elaboradas cada mañana con ingredientes naturales y café de micro-lotes peruanos recién calibrado.</p>
+      </div>
+    </section>
+
+    <!-- Barra de Filtros Interactivos -->
+    <div class="filter-bar">
+      <div class="container">
+        <button class="filter-btn active" data-filter="all">Todas las Delicias</button>
+        <button class="filter-btn" data-filter="postres">🍰 Postres Artesanales</button>
+        <button class="filter-btn" data-filter="cafe">☕ Cafés de Especialidad</button>
+        <button class="filter-btn" data-filter="frio">🧊 Bebidas Frías</button>
+        <button class="filter-btn" data-filter="sin-gluten">🌱 Vegano & Sin Gluten</button>
+      </div>
+    </div>
+
+    <!-- Catálogo de Productos -->
+    <section class="catalog-section">
+      <div class="container">
+        <div class="catalog-grid" id="catalog-container">
+          
+          <!-- Producto 1 -->
+          <article class="catalog-card" data-category="postres">
+            <div class="catalog-card-img" style="background: var(--color-rosa);">
+              <img src="../assets/postre-tarta-frambuesa.svg" alt="Tarta de frambuesa">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Cremoso</span>
+              <h3>Tarta de frambuesa</h3>
+              <p>Bizcocho de vainilla, crema suave de mascarpone y capas finas de chocolate belga de 70% cacao.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 18.50</span>
+                <a href="detalle-producto.html" class="btn btn--small btn--pink">Ver Ficha</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 2 -->
+          <article class="catalog-card" data-category="postres">
+            <div class="catalog-card-img" style="background: var(--color-durazno);">
+              <img src="../assets/postre-brownie-corazon.svg" alt="Brownie corazón">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Chocolate</span>
+              <h3>Brownie corazón</h3>
+              <p>Masa densa y húmeda de chocolate al 70% con nueces tostadas y corazón decorativo de vainilla pura.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 14.00</span>
+                <a href="detalle-producto.html" class="btn btn--small">Ver Ficha</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="catalog-card" data-category="postres">
+            <div class="catalog-card-img" style="background: var(--color-lila);">
+              <img src="../assets/postre-bizcocho-lavanda.svg" alt="Bizcocho de lavanda">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Floral</span>
+              <h3>Bizcocho de lavanda</h3>
+              <p>Bizcocho aireado infusionado con flores de lavanda orgánica y migas crujientes de cacao amargo.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 16.00</span>
+                <a href="detalle-producto.html" class="btn btn--small btn--pink">Ver Ficha</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="catalog-card" data-category="cafe">
+            <div class="catalog-card-img" style="background: #F0DCCB;">
+              <img src="../assets/cafe-latte-corazon.svg" alt="Café Latte">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Barista</span>
+              <h3>Café Latte con Arte Latte</h3>
+              <p>Doble shot de espresso de Villa Rica con leche cremada micro-espumada a 65°C y diseño floral.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 13.50</span>
+                <button type="button" class="btn btn--small" onclick="showToast('Añadido a tu comanda')">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 5 -->
+          <article class="catalog-card" data-category="cafe">
+            <div class="catalog-card-img" style="background: #E8D5C4;">
+              <img src="../assets/cafe-latte-corazon.svg" alt="Espresso Doble">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Intenso</span>
+              <h3>Espresso Doble Villa Rica</h3>
+              <p>Extracción pura a 9 bares de presión. Notas vivaces a chocolate amargo, avellana y final cítrico.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 9.50</span>
+                <button type="button" class="btn btn--small" onclick="showToast('Añadido a tu comanda')">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 6 -->
+          <article class="catalog-card" data-category="cafe">
+            <div class="catalog-card-img" style="background: #F4E7DA;">
+              <img src="../assets/hero-taza-crema.svg" alt="Filtrado V60">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Cata 88 pts</span>
+              <h3>Filtrado V60 Geisha Puno</h3>
+              <p>Método de extracción por goteo cónico. Resalta aromas a jazmín, miel de azahar y notas a durazno blanco.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 17.00</span>
+                <button type="button" class="btn btn--small" onclick="showToast('Añadido a tu comanda')">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 7 -->
+          <article class="catalog-card" data-category="frio">
+            <div class="catalog-card-img" style="background: #E0ECE4;">
+              <img src="../assets/hero-taza-crema.svg" alt="Cold Brew Cítrico">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">16 Horas</span>
+              <h3>Cold Brew Cítrico</h3>
+              <p>Café de Quillabamba infusionado lentamente en frío por 16 horas con rodajas de naranja deshidratada.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 15.00</span>
+                <button type="button" class="btn btn--small" onclick="showToast('Añadido a tu comanda')">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 8 -->
+          <article class="catalog-card" data-category="postres">
+            <div class="catalog-card-img" style="background: #F5E5E5;">
+              <img src="../assets/postre-tarta-frambuesa.svg" alt="Cheesecake Arándanos">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Frutos Rojos</span>
+              <h3>Cheesecake de Arándanos</h3>
+              <p>Clásica base de galletas de mantequilla, centro sedoso horneado y reducción de arándanos silvestres.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 19.00</span>
+                <a href="detalle-producto.html" class="btn btn--small btn--pink">Ver Ficha</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Producto 9 -->
+          <article class="catalog-card" data-category="sin-gluten">
+            <div class="catalog-card-img" style="background: #E8F0EA;">
+              <img src="../assets/postre-bizcocho-lavanda.svg" alt="Galleta Vegana">
+            </div>
+            <div class="catalog-card-body">
+              <span class="tag">Plant Based</span>
+              <h3>Galleta de Avena & Chía (Vegana)</h3>
+              <p>Elaborada con harina de almendras, semillas de chía, panela orgánica y nibs de cacao cusqueño.</p>
+              <div class="catalog-card-footer">
+                <span class="catalog-price">S/. 8.50</span>
+                <button type="button" class="btn btn--small" onclick="showToast('Añadido a tu comanda')">Pedir</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <img class="torn torn--footer" src="../assets/borde-rasgado-malva.svg" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__logo">Dulce Café</p>
+          <p>Repostería de autor y café de especialidad tostado localmente.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Visítanos</h2>
+          <address>Av. José Larco 450<br>Miraflores, Lima · Perú</address>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Horarios</h2>
+          <p>Lun - Dom: 07:30 – 21:00 hrs</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Enlaces</h2>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="reserva.html">Reservar Mesa</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <small>© 2026 Dulce Café. Todos los derechos reservados.</small>
+        <small>Hecho con café y cariño</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Búsqueda -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true">
+    <div class="search-modal">
+      <div class="search-header">
+        <span>🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar café, postres o tartas...">
+        <button type="button" class="search-close-btn" id="search-close">✕</button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <div class="toast-container"></div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Reserva | Dulce Café</title>
+  <meta name="description" content="Comprobante digital y confirmación oficial de tu reserva en Dulce Café.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="alternate icon" href="../assets/favicon-32x32.png">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Parisienne&display=swap">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../src/css/styles.css">
+
+  <!-- JavaScript -->
+  <script src="../src/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">📧 <strong>Contacto:</strong> <a href="mailto:hola@dulcecafe.pe">hola@dulcecafe.pe</a></span>
+        <span class="top-bar-item">📞 <strong>Central:</strong> <a href="tel:+5114458920">+51 (1) 445-8920</a></span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><span class="pulse-dot"></span> Reserva Garantizada</span>
+        <span class="top-bar-item">🕒 07:30 - 21:00 hrs</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Encabezado -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/logo.svg" alt="Dulce Café" class="logo-img" width="180" height="42">
+      </a>
+
+      <nav id="menu-principal" class="main-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="carta.html">Carta</a></li>
+          <li><a href="../index.html#cafe">Nuestro Café</a></li>
+          <li><a href="reserva.html">Reservar Mesa</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" aria-label="Buscar" data-action="open-search">
+          <img src="../assets/icon-buscar.svg" alt="Buscar" width="20" height="20">
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <img src="../assets/icon-menu.svg" alt="Menú" width="20" height="20">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="confirmation-section">
+      <div class="container">
+        
+        <div class="confirmation-card">
+          <div class="confirmation-badge-icon">
+            <img src="../assets/icon-check.svg" alt="Confirmado" width="42" height="42">
+          </div>
+
+          <span class="eyebrow" style="color: var(--color-verde-exito);">RESERVA CONFIRMADA CON ÉXITO</span>
+          <h2>¡Te esperamos en Dulce Café!</h2>
+          <p style="color: var(--color-texto-suave); font-size: 1.05rem; max-width: 500px; margin: 0 auto;">
+            Tu mesa ha sido reservada en nuestro sistema. Hemos enviado una copia de este comprobante a tu correo electrónico.
+          </p>
+
+          <!-- Tarjeta de Ticket de Reserva -->
+          <div class="ticket-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed rgba(74,42,39,0.2); padding-bottom: 12px; margin-bottom: 12px;">
+              <strong style="font-family: var(--fuente-titulos); font-size: 1.4rem;">☕ Comprobante Digital</strong>
+              <span id="ticket-code" style="font-weight: 700; color: var(--color-frambuesa); font-size: 1.1rem;">#DC-7842</span>
+            </div>
+
+            <div class="ticket-row">
+              <span>Titular de la Reserva:</span>
+              <strong id="ticket-name">Camila Morales</strong>
+            </div>
+
+            <div class="ticket-row">
+              <span>Correo Electrónico:</span>
+              <strong id="ticket-email">camila@correo.com</strong>
+            </div>
+
+            <div class="ticket-row">
+              <span>Fecha & Horario:</span>
+              <strong id="ticket-datetime">16 Nov 2026 · 16:00 hrs</strong>
+            </div>
+
+            <div class="ticket-row">
+              <span>Comensales:</span>
+              <strong id="ticket-people">2 Personas</strong>
+            </div>
+
+            <div class="ticket-row">
+              <span>Ambiente Reservado:</span>
+              <strong id="ticket-table">Salón íntimo biblioteca</strong>
+            </div>
+
+            <div class="ticket-row">
+              <span>Tolerancia de Espera:</span>
+              <span style="color: var(--color-verde-exito); font-weight: 600;">15 minutos de cortesía</span>
+            </div>
+          </div>
+
+          <!-- Indicaciones -->
+          <div style="background: var(--color-crema-fondo); border-radius: 12px; padding: 18px; text-align: left; font-size: 0.9rem; color: #6B4D49; margin-bottom: 28px;">
+            <p style="margin-bottom: 6px;">📍 <strong>Dirección:</strong> Av. José Larco 450, Miraflores, Lima (Parque Kennedy).</p>
+            <p>💡 <em>Al llegar, solo menciona tu nombre o muestra este comprobante en la barra principal.</em></p>
+          </div>
+
+          <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn--small" onclick="window.print()">🖨️ Imprimir Ticket</button>
+            <a href="carta.html" class="btn btn--small btn--pink">Explorar Carta de Postres</a>
+            <a href="../index.html" class="btn btn--small btn--outline" style="border-color: var(--color-chocolate); color: var(--color-chocolate);">Volver al Inicio</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <img class="torn torn--footer" src="../assets/borde-rasgado-malva.svg" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__logo">Dulce Café</p>
+          <p>Café de especialidad y repostería artesanal para compartir.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Visítanos</h2>
+          <address>Av. José Larco 450<br>Miraflores, Lima · Perú</address>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Horarios</h2>
+          <p>Lun - Dom: 07:30 – 21:00 hrs</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Enlaces</h2>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <small>© 2026 Dulce Café. Todos los derechos reservados.</small>
+        <small>Hecho con café y cariño</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Recuperar datos reales de la reserva desde localStorage
+    try {
+      const data = JSON.parse(localStorage.getItem('dulce_cafe_ultima_reserva'));
+      if (data) {
+        if (data.codigo) document.getElementById('ticket-code').textContent = '#' + data.codigo;
+        if (data.nombre) document.getElementById('ticket-name').textContent = data.nombre;
+        if (data.email) document.getElementById('ticket-email').textContent = data.email;
+        if (data.fecha && data.hora) document.getElementById('ticket-datetime').textContent = data.fecha + ' · ' + data.hora + ' hrs';
+        if (data.personas) document.getElementById('ticket-people').textContent = data.personas + (data.personas === '1' ? ' Persona' : ' Personas');
+        if (data.mesa) document.getElementById('ticket-table').textContent = data.mesa;
+      }
+    } catch (e) {
+      console.log('Using default mock reservation ticket');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulce Café | Café de Especialidad & Repostería Artesanal</title>
+  <meta name="description" content="Cafetería de especialidad con granos de origen peruano recién tostados y repostería artesanal horneada cada mañana. Conoce nuestra carta y visítanos.">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="assets/favicon-32x32.png">
+
+  <!-- Tipografías: Local Fallback + Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Parisienne&display=swap">
+
+  <!-- Estilos del Proyecto (src/css/styles.css) -->
+  <link rel="stylesheet" href="src/css/styles.css">
+
+  <!-- Lógica y Comportamiento JavaScript (src/js/main.js) -->
+  <script src="src/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Top Bar Corporativa (Contacto, Horario y Estado del Café)
+       ====================================================================== -->
+  <aside class="top-bar" aria-label="Información corporativa y estado del servicio">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">
+          📧 <strong data-i18n="top_contact">Contacto:</strong> <a href="mailto:hola@dulcecafe.pe">hola@dulcecafe.pe</a>
+        </span>
+        <span class="top-bar-item">
+          📞 <strong>Central:</strong> <a href="tel:+5114458920">+51 (1) 445-8920</a>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item">
+          <span class="pulse-dot"></span> <span data-i18n="top_status">Granos frescos tostados hoy</span>
+        </span>
+        <span class="top-bar-item">
+          🕒 <span data-i18n="top_hours">Horario: Lun-Dom 07:30 - 21:00 hrs</span>
+        </span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       2. Encabezado y Navegación Principal
+       ====================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="#inicio" class="logo-link" title="Dulce Café - Inicio">
+        <img src="assets/logo.svg" alt="Logo de Dulce Café" class="logo-img" width="180" height="42">
+      </a>
+
+      <!-- Menú de Navegación Responsive -->
+      <nav id="menu-principal" class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#inicio" class="active" aria-current="page" data-i18n="nav_home">Inicio</a></li>
+          <li><a href="pages/carta.html" data-i18n="nav_menu">Carta</a></li>
+          <li><a href="#cafe" data-i18n="nav_about">Nuestro Café</a></li>
+          <li><a href="pages/reserva.html" data-i18n="nav_booking">Reservar Mesa</a></li>
+          <li><a href="pages/contacto.html" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones de Cabecera: Idioma, Búsqueda, CTA y Menú Hamburguesa -->
+      <div class="site-header__actions">
+        <!-- Selector i18n -->
+        <div class="lang-selector" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es" title="Español">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+          <button type="button" class="lang-btn" data-lang="fr" title="Français">FR</button>
+        </div>
+
+        <!-- Botón de Búsqueda -->
+        <button class="icon-btn" type="button" aria-label="Buscar" data-action="open-search" title="Buscar en la carta">
+          <img src="assets/icon-buscar.svg" alt="Icono de lupa" width="20" height="20">
+        </button>
+
+        <!-- Botón CTA Pedir -->
+        <a class="btn btn--small" href="pages/carta.html">Pedir</a>
+
+        <!-- Botón Menú Móvil -->
+        <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <img src="assets/icon-menu.svg" alt="Icono de hamburguesa" width="20" height="20">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. Portada (Hero Section) con Efecto de Papel Rasgado
+       ====================================================================== -->
+  <main id="inicio">
+
+    <section class="hero" aria-labelledby="hero-titulo">
+      <!-- Borde rasgado superior decorativo -->
+      <img class="torn torn--top" src="assets/borde-rasgado-crema.svg" alt="" aria-hidden="true">
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow" style="color: #F8D9DE;">CAFÉ DE ESPECIALIDAD & REPOSTERÍA</span>
+          <h1 id="hero-titulo">
+            Momentos dulces
+            <span class="highlight-script">empiezan aquí.</span>
+          </h1>
+          <p data-i18n="hero_subtitle">
+            Café de especialidad recién molido y repostería artesanal horneada cada mañana. Pasa por una taza y quédate por la conversación.
+          </p>
+
+          <div class="hero__buttons">
+            <a class="btn" href="pages/carta.html" data-i18n="btn_view_menu">Ver la Carta</a>
+            <a class="btn btn--outline" href="pages/reserva.html" data-i18n="btn_book_table">Reservar Mesa</a>
+          </div>
+
+          <!-- Métricas de Confianza -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <strong>3</strong>
+              <span data-i18n="stat_origin">Granos de Origen</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong>18+</strong>
+              <span data-i18n="stat_recipes">Recetas Propias</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong>99.8%</strong>
+              <span data-i18n="stat_satisfaction">Satisfacción</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ilustración Principal de la Portada -->
+        <div class="hero__art">
+          <img src="assets/hero-taza-crema.svg" alt="Taza de café con crema batida y frambuesa fresca en la portada" width="540" height="500">
+        </div>
+      </div>
+
+      <!-- Borde rasgado inferior decorativo -->
+      <img class="torn torn--bottom" src="assets/borde-rasgado-crema.svg" alt="" aria-hidden="true">
+    </section>
+
+    <!-- ======================================================================
+         4. Datos Rápidos (Información Clave de la Cafetería)
+         ====================================================================== -->
+    <section class="info" aria-label="Información rápida del local">
+      <div class="container info__list">
+        
+        <div class="info__item">
+          <span class="info__icon">
+            <img src="assets/icon-taza.svg" alt="Icono de taza humeante" width="30" height="30">
+          </span>
+          <div>
+            <p class="info__title" data-i18n="quick_open_title">Abierto todos los días</p>
+            <p class="info__text" data-i18n="quick_open_desc">07:30 a 21:00 hrs · Sin reserva requerida</p>
+          </div>
+        </div>
+
+        <div class="info__item">
+          <span class="info__icon">
+            <img src="assets/icon-granos.svg" alt="Icono de granos de café seleccionados" width="30" height="30">
+          </span>
+          <div>
+            <p class="info__title" data-i18n="quick_origin_title">Granos de especialidad</p>
+            <p class="info__text" data-i18n="quick_origin_desc">Villa Rica, Cusco y Puno · Tostado artesanal</p>
+          </div>
+        </div>
+
+        <div class="info__item">
+          <span class="info__icon">
+            <img src="assets/icon-corazon.svg" alt="Icono de corazón de repostería hecha a mano" width="28" height="28">
+          </span>
+          <div>
+            <p class="info__title" data-i18n="quick_bakery_title">Horneado diario</p>
+            <p class="info__text" data-i18n="quick_bakery_desc">En pequeños lotes con ingredientes naturales</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Sección de Postres Destacados
+         ====================================================================== -->
+    <section class="section" id="postres" aria-labelledby="postres-titulo">
+      <div class="container">
+        
+        <header class="section__head">
+          <div>
+            <p class="eyebrow" data-i18n="sec_desserts_eyebrow">Nuestros postres</p>
+            <h2 id="postres-titulo" data-i18n="sec_desserts_title">Algo dulce para cada taza</h2>
+          </div>
+          <p class="section__note" data-i18n="sec_desserts_note">
+            Elaboramos en pequeñas tandas para que cada porción llegue con su textura y aroma intactos a tu mesa.
+          </p>
+        </header>
+
+        <!-- Grilla de Tarjetas de Postres (Rosa, Durazno, Lila) -->
+        <div class="cards">
+          
+          <!-- Tarjeta 1: Tarta de frambuesa (Rosa) -->
+          <article class="card card--pink">
+            <span class="card-badge-top">⭐ Top Favorito</span>
+            <h3>Tarta de frambuesa</h3>
+            <img src="assets/postre-tarta-frambuesa.svg" alt="Porción de tarta artesanal con capas de crema mascarpone y frambuesa fresca" width="240" height="190">
+            <p>Bizcocho de vainilla, crema de mascarpone y capas de chocolate belga.</p>
+            <div class="card-price-row">
+              <span class="card-price">S/. 18.50</span>
+              <a href="pages/detalle-producto.html" class="btn btn--small btn--pink">Detalle</a>
+            </div>
+            <footer>
+              <span class="tag">Cremoso</span>
+              <span class="script">de la casa</span>
+            </footer>
+          </article>
+
+          <!-- Tarjeta 2: Brownie corazón (Durazno) -->
+          <article class="card card--peach">
+            <span class="card-badge-top">🍫 Cacao 70%</span>
+            <h3>Brownie corazón</h3>
+            <img src="assets/postre-brownie-corazon.svg" alt="Cuadrado de brownie de chocolate intenso con corazón blanco de vainilla" width="240" height="190">
+            <p>Chocolate intenso sobre una base de bizcocho dorado y crocante de nuez.</p>
+            <div class="card-price-row">
+              <span class="card-price">S/. 14.00</span>
+              <a href="pages/detalle-producto.html" class="btn btn--small">Detalle</a>
+            </div>
+            <footer>
+              <span class="tag">Chocolate</span>
+              <span class="script">con cariño</span>
+            </footer>
+          </article>
+
+          <!-- Tarjeta 3: Bizcocho de lavanda (Lila) -->
+          <article class="card card--lilac">
+            <span class="card-badge-top">🌿 Aromático</span>
+            <h3>Bizcocho de lavanda</h3>
+            <img src="assets/postre-bizcocho-lavanda.svg" alt="Bizcocho esponjoso con migas de cacao y ramita de flor de lavanda" width="240" height="190">
+            <p>Migas de cacao crujiente y un delicado toque floral de infusión de lavanda.</p>
+            <div class="card-price-row">
+              <span class="card-price">S/. 16.00</span>
+              <a href="pages/detalle-producto.html" class="btn btn--small btn--pink">Detalle</a>
+            </div>
+            <footer>
+              <span class="tag">Floral</span>
+              <span class="script">hecho hoy</span>
+            </footer>
+          </article>
+
+        </div>
+
+        <div class="cards-cta-container">
+          <a href="pages/carta.html" class="btn btn--pink">Explorar Carta Completa (10 Variedades) ›</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Sección Nuestro Café (Del Grano a la Taza)
+         ====================================================================== -->
+    <section class="coffee" id="cafe" aria-labelledby="cafe-titulo">
+      <div class="container coffee__grid">
+        
+        <div class="coffee__art">
+          <img src="assets/cafe-latte-corazon.svg" alt="Taza de café latte con delicado arte latte en forma de corazón y platillo de acompañamiento" width="500" height="400">
+        </div>
+
+        <div class="coffee__copy">
+          <p class="eyebrow" data-i18n="sec_coffee_eyebrow">Del grano a la taza</p>
+          <h2 id="cafe-titulo" data-i18n="sec_coffee_title">Nuestro café</h2>
+          <p data-i18n="sec_coffee_p1">
+            Seleccionamos minuciosamente micro-lotes de caficultores peruanos y calibramos la molienda al instante según el método elegido.
+          </p>
+          <p data-i18n="sec_coffee_p2">
+            Disfruta un espresso vibrante, un pour-over V60 aromático o un capuchino con arte latte. Cada bebida se sirve con dedicación y calidez.
+          </p>
+
+          <!-- Chips de Origen Peruano -->
+          <div class="coffee-chips">
+            <span class="coffee-chip">🏔️ Villa Rica (1,600 msnm)</span>
+            <span class="coffee-chip">🌿 Cusco - Quillabamba</span>
+            <span class="coffee-chip">☕ Puno - Sandia (Geisha)</span>
+          </div>
+
+          <a class="btn btn--pink" href="pages/carta.html" data-i18n="btn_explore_methods">Conocer Métodos y Orígenes</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Métodos de Extracción de Especialidad
+         ====================================================================== -->
+    <section class="methods-section" aria-labelledby="methods-title">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p class="eyebrow">BARISMO ARTESANAL</p>
+          <h3 id="methods-title" style="font-size: 2.4rem;">Métodos de Extracción en Barra</h3>
+          <p style="color: var(--color-texto-suave); font-size: 0.95rem;">
+            Cada método resalta notas únicas de acidez, dulzor y cuerpo de nuestros cafés de origen.
+          </p>
+        </div>
+
+        <div class="methods-grid">
+          <div class="method-card">
+            <div class="method-icon">☕</div>
+            <h4>Espresso</h4>
+            <p>9 bares de presión. Cuerpo denso, crema persistente y notas a cacao oscuro.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">🧪</div>
+            <h4>V60 Goteo</h4>
+            <p>Filtrado cónico japonés. Taza limpia y brillante con notas florales y frutales.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">❄️</div>
+            <h4>Cold Brew 16h</h4>
+            <p>Infusión lenta en agua fría por 16 horas. Dulzor natural y bajísima acidez.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">🏺</div>
+            <h4>Prensa Francesa</h4>
+            <p>Inmersión completa por 4 minutos. Resalta los aceites esenciales y cuerpo robusto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. Testimonios de la Comunidad
+         ====================================================================== -->
+    <section class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p class="eyebrow">EXPERIENCIAS REALES</p>
+          <h3 id="testimonials-title" style="font-size: 2.4rem;">Lo que dicen nuestros clientes</h3>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "La tarta de frambuesa con la taza de café latte es el mejor maridaje que he probado en Lima. La música suave y el diseño del local hacen que quieras quedarte horas leyendo."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MC</div>
+              <div class="author-info">
+                <h5>Mariana Cornejo</h5>
+                <span>Cliente frecuente · Miraflores</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Se nota el respeto por el origen del café. El barista se tomó el tiempo de explicarme las notas del Geisha de Puno en V60. Y el brownie corazón estaba tibio y delicioso."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">DR</div>
+              <div class="author-info">
+                <h5>Diego Rodríguez</h5>
+                <span>Entusiasta de café de especialidad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Excelente atención para reuniones de trabajo tranquilas. El wifi es veloz y los postres artesanales son insuperables. 100% recomendado reservar con anticipación."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">SL</div>
+              <div class="author-info">
+                <h5>Sofía Larrea</h5>
+                <span>Diseñadora de Experiencias</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       9. Pie de Página (Site Footer) con Borde Rasgado
+       ====================================================================== -->
+  <footer class="site-footer" id="visitanos">
+    <!-- Borde rasgado superior decorativo -->
+    <img class="torn torn--footer" src="assets/borde-rasgado-malva.svg" alt="" aria-hidden="true">
+
+    <div class="container">
+      <div class="site-footer__grid">
+        
+        <!-- Columna 1: Marca y Filosofía -->
+        <div>
+          <p class="site-footer__logo">Dulce Café</p>
+          <p data-i18n="footer_about">
+            Café de especialidad y repostería artesanal para compartir en un espacio de paz y conversación.
+          </p>
+          <p style="margin-top: 14px; font-size: 0.82rem; opacity: 0.85;">
+            Sede Principal: Miraflores, Lima · Perú
+          </p>
+        </div>
+
+        <!-- Columna 2: Visítanos -->
+        <div>
+          <h2 class="site-footer__title" data-i18n="footer_visit">Visítanos</h2>
+          <address>
+            Av. José Larco 450<br>
+            Miraflores, Lima<br>
+            <span style="opacity: 0.8; font-size: 0.85rem;">(A 2 cuadras del Parque Kennedy)</span>
+          </address>
+        </div>
+
+        <!-- Columna 3: Horarios -->
+        <div>
+          <h2 class="site-footer__title" data-i18n="footer_hours">Horarios</h2>
+          <p>
+            Lunes a Viernes<br>
+            <strong>07:30 – 21:00 hrs</strong><br><br>
+            Sábados y Domingos<br>
+            <strong>08:30 – 22:00 hrs</strong>
+          </p>
+        </div>
+
+        <!-- Columna 4: Síguenos & Enlaces Rápidos -->
+        <div>
+          <h2 class="site-footer__title" data-i18n="footer_follow">Síguenos</h2>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">📸 Instagram [@dulcecafe.pe]</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener">📘 Facebook [/dulcecafeweb]</a></li>
+            <li><a href="https://tiktok.com" target="_blank" rel="noopener">🎵 TikTok [@dulcecafeweb]</a></li>
+            <li><a href="pages/contacto.html">💬 WhatsApp Barista</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Barra de Derechos Reservados -->
+      <div class="site-footer__bottom">
+        <small>© <span id="anio">2026</span> Dulce Café. Todos los derechos reservados.</small>
+        <small>Hecho con café de origen y cariño artesanal</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       10. Modal de Búsqueda Interactiva en Tiempo Real
+       ====================================================================== -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+    <div class="search-modal">
+      <div class="search-header">
+        <span>🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar café, postres o tartas..." aria-label="Término de búsqueda">
+        <button type="button" class="search-close-btn" id="search-close" aria-label="Cerrar buscador">✕</button>
+      </div>
+      <div class="search-results" id="search-results">
+        <!-- Render dinámico desde JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor para Alertas y Mensajes Flotantes -->
+  <div class="toast-container" aria-live="polite"></div>
+
+</body>
+</html>

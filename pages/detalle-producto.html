@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarta de Frambuesa Artesanal | Ficha de Producto | Dulce Café</title>
+  <meta name="description" content="Ficha técnica de la tarta de frambuesa con mascarpone y chocolate belga. Ingredientes, notas de cata y maridaje de café de especialidad.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="alternate icon" href="../assets/favicon-32x32.png">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Parisienne&display=swap">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../src/css/styles.css">
+
+  <style>
+    .product-detail-section { padding: 60px 0 90px; }
+    .product-detail-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+    .product-media-card { background: var(--color-rosa); border-radius: 32px; padding: 48px; text-align: center; box-shadow: var(--sombra-modal); position: sticky; top: 96px; }
+    .product-media-card img { width: 100%; max-width: 380px; margin: 0 auto; filter: drop-shadow(0 16px 24px rgba(74,42,39,0.2)); }
+    .badge-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(255,255,255,0.7); border-radius: var(--radio-pill); font-size: 0.8rem; font-weight: 700; color: var(--color-frambuesa); }
+    .product-info-box h1 { font-size: 3.4rem; line-height: 1.08; margin: 12px 0 16px; color: var(--color-tinta); }
+    .product-price-tag { font-family: var(--fuente-titulos); font-size: 2.4rem; font-weight: 700; color: var(--color-frambuesa); margin-bottom: 20px; }
+    .taste-profile { background: var(--color-crema-claro); border-radius: 20px; padding: 24px; margin: 28px 0; border: 1px solid var(--color-borde); }
+    .taste-bars { display: grid; gap: 12px; margin-top: 14px; }
+    .taste-bar-item { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; }
+    .taste-meter { width: 50%; height: 8px; background: #E8D5C4; border-radius: var(--radio-pill); overflow: hidden; }
+    .taste-meter-fill { height: 100%; background: var(--color-frambuesa); border-radius: var(--radio-pill); }
+    .pairing-card { background: #F0DCCB; border-radius: 18px; padding: 20px; display: flex; align-items: center; gap: 16px; margin: 24px 0; }
+    .pairing-icon { font-size: 2rem; }
+    .quantity-row { display: flex; align-items: center; gap: 16px; margin-top: 28px; }
+    .qty-picker { display: inline-flex; align-items: center; border: 1.5px solid var(--color-borde); border-radius: var(--radio-pill); background: #FFF; overflow: hidden; }
+    .qty-btn { border: none; background: transparent; padding: 8px 16px; font-weight: 700; cursor: pointer; font-size: 1.1rem; }
+    .qty-display { padding: 8px 12px; font-weight: 700; min-width: 32px; text-align: center; }
+    @media(max-width: 900px) { .product-detail-grid { grid-template-columns: 1fr; } .product-media-card { position: static; } }
+  </style>
+
+  <!-- JavaScript -->
+  <script src="../src/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-bar-item">📧 <strong>Contacto:</strong> <a href="mailto:hola@dulcecafe.pe">hola@dulcecafe.pe</a></span>
+        <span class="top-bar-item">📞 <strong>Central:</strong> <a href="tel:+5114458920">+51 (1) 445-8920</a></span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><span class="pulse-dot"></span> Repostería fresca del día</span>
+        <span class="top-bar-item">🕒 07:30 - 21:00 hrs</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Encabezado -->
+  <header class="site-header" id="header">
+    <div class="container site-header__inner">
+      <a href="../index.html" class="logo-link">
+        <img src="../assets/logo.svg" alt="Dulce Café" class="logo-img" width="180" height="42">
+      </a>
+
+      <nav id="menu-principal" class="main-nav">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="carta.html" class="active">Carta</a></li>
+          <li><a href="../index.html#cafe">Nuestro Café</a></li>
+          <li><a href="reserva.html">Reservar Mesa</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" aria-label="Buscar" data-action="open-search">
+          <img src="../assets/icon-buscar.svg" alt="Buscar" width="20" height="20">
+        </button>
+        <a class="btn btn--small" href="reserva.html">Reservar</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <img src="../assets/icon-menu.svg" alt="Menú" width="20" height="20">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-detail-section">
+      <div class="container">
+        
+        <p class="breadcrumb">
+          <a href="../index.html">Inicio</a> › <a href="carta.html">Carta</a> › Tarta de Frambuesa
+        </p>
+
+        <div class="product-detail-grid">
+          
+          <!-- Imagen de la Tarta en Tarjeta Rosa -->
+          <div class="product-media-card">
+            <span class="badge-pill">🍓 Especialidad de la Pastelería</span>
+            <img src="../assets/postre-tarta-frambuesa.svg" alt="Tarta de frambuesa con mascarpone y chocolate belga" width="380" height="300">
+            <p class="script" style="margin-top: 18px; font-size: 2.2rem;">hecho con cariño</p>
+          </div>
+
+          <!-- Información Detallada del Producto -->
+          <div class="product-info-box">
+            <span class="eyebrow">REPOSTERÍA DE AUTOR</span>
+            <h1>Tarta de frambuesa con mascarpone y chocolate belga</h1>
+            <div class="product-price-tag">S/. 18.50</div>
+
+            <p style="font-size: 1.08rem; color: var(--color-texto-suave); line-height: 1.65;">
+              Nuestra creación más aplaudida. Una base ligera de bizcocho esponjoso de vainilla natural de Madagascar, capas alternadas de crema batida de mascarpone artesanal y un ganache sedoso de chocolate belga al 70%. Coronada con frambuesas frescas del valle de Lunahuaná.
+            </p>
+
+            <!-- Perfil Sensorial -->
+            <div class="taste-profile">
+              <h4 style="font-size: 1.25rem;">Notas de Cata y Textura</h4>
+              <div class="taste-bars">
+                <div class="taste-bar-item">
+                  <span>Cremosidad</span>
+                  <div class="taste-meter"><div class="taste-meter-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="taste-bar-item">
+                  <span>Acidez frutal (Frambuesa)</span>
+                  <div class="taste-meter"><div class="taste-meter-fill" style="width: 75%;"></div></div>
+                </div>
+                <div class="taste-bar-item">
+                  <span>Intensidad de Cacao (70%)</span>
+                  <div class="taste-meter"><div class="taste-meter-fill" style="width: 60%;"></div></div>
+                </div>
+                <div class="taste-bar-item">
+                  <span>Dulzor equilibrado</span>
+                  <div class="taste-meter"><div class="taste-meter-fill" style="width: 45%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Maridaje Recomendado con Café -->
+            <div class="pairing-card">
+              <div class="pairing-icon">☕</div>
+              <div>
+                <strong style="color: var(--color-tinta); display: block;">Maridaje Perfecto Recomendado por el Barista:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-texto-suave);">
+                  Acompáñala con un <strong>Café Latte Villa Rica</strong> o un <strong>Filtrado V60 Geisha</strong>. La acidez brillante del café corta la cremosidad del mascarpone y realza el chocolate.
+                </span>
+              </div>
+            </div>
+
+            <!-- Selector de Porciones y Acciones -->
+            <div class="quantity-row">
+              <div class="qty-picker">
+                <button type="button" class="qty-btn" onclick="let d = document.getElementById('qty'); d.textContent = Math.max(1, parseInt(d.textContent) - 1);">-</button>
+                <span class="qty-display" id="qty">1</span>
+                <button type="button" class="qty-btn" onclick="let d = document.getElementById('qty'); d.textContent = parseInt(d.textContent) + 1;">+</button>
+              </div>
+
+              <button type="button" class="btn btn--pink" onclick="showToast('Añadido a tu pedido')">
+                🛒 Añadir a mi Pedido
+              </button>
+
+              <a href="reserva.html" class="btn">
+                Reservar con Degustación
+              </a>
+            </div>
+
+            <!-- Alérgenos e Información Dietética -->
+            <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--color-borde); font-size: 0.85rem; color: #7A5C58;">
+              <p><strong>Alérgenos:</strong> Contiene gluten, lácteos y huevos. Libre de conservantes artificiales.</p>
+              <p><strong>Conservación:</strong> Mantener refrigerado entre 4°C y 7°C. Consumir dentro de las 48 horas para máxima frescura.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <img class="torn torn--footer" src="../assets/borde-rasgado-malva.svg" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__logo">Dulce Café</p>
+          <p>Repostería artesanal horneada cada mañana con ingredientes naturales.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Visítanos</h2>
+          <address>Av. José Larco 450<br>Miraflores, Lima · Perú</address>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Horarios</h2>
+          <p>Lun - Dom: 07:30 – 21:00 hrs</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Enlaces</h2>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="carta.html">Carta Completa</a></li>
+            <li><a href="reserva.html">Reservar Mesa</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <small>© 2026 Dulce Café. Todos los derechos reservados.</small>
+        <small>Hecho con café y cariño</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Búsqueda -->
+  <div class="modal-backdrop" id="search-modal" role="dialog" aria-modal="true">
+    <div class="search-modal">
+      <div class="search-header">
+        <span>🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Buscar café, postres o tartas...">
+        <button type="button" class="search-close-btn" id="search-close">✕</button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <div class="toast-container"></div>
+</body>
+</html>
